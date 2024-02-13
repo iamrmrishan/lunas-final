@@ -14,6 +14,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React from "react";
 import { AwardsReceived } from "@/components/awards-received";
+import { MailList } from "@/components/post-list";
+import { mails } from "@/components/data";
 
 export default function ProfilePage() {
   const components: { title: string; description: string }[] = [
@@ -30,9 +32,9 @@ export default function ProfilePage() {
   return (
     <div className="flex min-h-screen w-full flex-col items-start justify-start">
       <div className="grid grid-cols-6 gap-2 w-full">
-        <div className="col-span-6 md:col-span-4 lg:col-span-4 m-5">
+        <div className="col-span-6 md:col-span-4 lg:col-span-4">
           <section className="container flex flex-col gap-6 py-8 md:py-12 lg:py-20">
-            <div className="mx-auto flex flex-col gap-10 p- rounded-lg border">
+            <div className="mx-auto flex flex-col gap-10 rounded-lg border">
               <div className="flex flex-col gap-6">
                 <Tabs defaultValue="overview">
                   <TabsList>
@@ -42,8 +44,8 @@ export default function ProfilePage() {
                     {/* <TabsTrigger value="comments">Comments</TabsTrigger>
                     <TabsTrigger value="saved">Saved</TabsTrigger> */}
                   </TabsList>
-                  <TabsContent value="account">
-                    Make changes to your account here.
+                  <TabsContent value="overview">
+                    <MailList items={mails} />
                   </TabsContent>
                   <TabsContent value="password">
                     Change your password here.
@@ -90,9 +92,9 @@ export default function ProfilePage() {
             </div>
           </section>
         </div>
-        <div className="col-span-6 md:col-span-2 lg:col-span-2 m-5">
+        <div className="col-span-6 md:col-span-2 lg:col-span-2">
           <section className="container gap-6 py-8 md:py-12 lg:py-20">
-            <div className="mx-auto flex flex-col gap-10 p-10 rounded-lg border">
+            <div className="mx-auto flex flex-col gap-10 p-5 rounded-lg border">
               <div className="flex items-center flex-col gap-6">
                 <Avatar>
                   <AvatarImage src="https://github.com/shadcn.png" />
