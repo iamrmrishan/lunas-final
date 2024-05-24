@@ -84,7 +84,7 @@ function getBadgeVariantFromLabel(
   }
 
   if (["question"].includes(label.toLowerCase())) {
-    return "destructive";
+    return "red";
   }
 
   return "green";

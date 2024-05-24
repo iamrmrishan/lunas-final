@@ -48,6 +48,10 @@ const config = {
           DEFAULT: "hsl(var(--green))",
           foreground: "hsl(var(--green-foreground))",
         },
+        red: {
+          DEFAULT: "hsl(var(--red))",
+          foreground: "hsl(var(--red-foreground))",
+        },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",

@@ -28,9 +28,11 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --blue: 240 84.2% 60.2%;
+    --red: 0 62.8% 30.6%;
 
-    --green: 300 84.3% 30%;
+    --blue: 238 75% 45%;
+
+    --green: 91.4 62.7% 26.3%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
@@ -64,11 +66,14 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --blue: 240 84.2% 60.2%;
-    --blue-foreground: 240 84.2% 60.2%;
+    --blue: 238 75% 45%;
+    --blue-foreground: 238 75% 45%;
 
-    --green: 300 84.3% 30%;
-    --green-foreground: 300 84.3% 30%;
+    --green: 91.4 62.7% 26.3%;
+    --green-foreground: 91.4 62.7% 26.3%;
+
+    --red: 0 62.8% 30.6%;
+    --red-foreground: 0 62.8% 30.6%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;

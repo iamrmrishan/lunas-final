@@ -1,25 +1,23 @@
 "use client";
 
-import React, { use, useEffect, useState } from "react";
-import { zodResolver } from "@hookform/resolvers/zod";
+import React, { Suspense } from "react";
 import { useFieldArray, useForm } from "react-hook-form";
-import * as z from "zod";
-
-import { cn } from "@/lib/utils";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-const LexicalEditor = dynamic(() => import("./lexical-editor"), { ssr: false });
 import { Button } from "./ui/button";
-import Editor from "./editor/editor";
 import dynamic from "next/dynamic";
+
+const EditorComp = dynamic(() => import("./editor"), { ssr: false });
+const markdown = `
+Hello **world**!
+`;
 
 // This can come from your database or API.
 const defaultValues: Partial<any> = {
@@ -28,7 +26,6 @@ const defaultValues: Partial<any> = {
 };
 
 export default function PublishForm() {
-  const [searchText, setSearchText] = useState("");
 
   const form = useForm<any>({
     defaultValues,
@@ -76,7 +73,9 @@ export default function PublishForm() {
               <FormItem>
                 <FormLabel>Review Body</FormLabel>
                 <FormControl>
-                  {/* <LexicalEditor /> */}
+                  <Suspense fallback={null}>
+                    <EditorComp markdown={markdown} />
+                  </Suspense>
                 </FormControl>
                 <FormMessage />
               </FormItem>

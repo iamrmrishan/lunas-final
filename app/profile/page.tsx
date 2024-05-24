@@ -5,6 +5,7 @@ import React from "react";
 import { AwardsReceived } from "@/components/awards-received";
 import { MailList } from "@/components/post-list";
 import { mails } from "@/components/data";
+import { DropdownMenuRadioGroupDemo } from "@/components/mobile-profile-post-dropdown";
 
 export default function ProfilePage() {
   return (
@@ -19,8 +20,11 @@ export default function ProfilePage() {
                     <TabsTrigger value="overview">Overview</TabsTrigger>
                     <TabsTrigger value="reviews">Reviews</TabsTrigger>
                     <TabsTrigger value="questions">Questions</TabsTrigger>
-                    {/* <TabsTrigger value="comments">Comments</TabsTrigger>
-                    <TabsTrigger value="saved">Saved</TabsTrigger> */}
+                    <TabsTrigger value="comments">Comments</TabsTrigger>
+                    <TabsTrigger value="saved">Saved</TabsTrigger>
+                    <TabsTrigger value="questions">Questions</TabsTrigger>
+                    <TabsTrigger value="comments">Comments</TabsTrigger>
+                    <TabsTrigger value="saved">Saved</TabsTrigger>
                   </TabsList>
                   <TabsContent value="overview">
                     <MailList items={mails} />
